@@ -1,0 +1,12 @@
+language: java 
+jdk:
+- openjdk8
+addons:
+  sonarcloud:
+    organization: "federicox"
+    token:
+      secure: "e9efabaca538d05e42ab9154b119c6cabbe034f2"
+
+script:
+  - ant build
+  - sonar-scanner
